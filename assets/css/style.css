@@ -1,0 +1,217 @@
+/*Header Start.*/
+header {
+    /*border: 2px solid red;*/
+    position: relative;
+    height: 80px;
+    box-shadow: 5px 6px 9px -4px #917a7a;
+}
+
+header > img {
+    width: 200px;
+    margin: 18px;
+
+}
+
+header > ul {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    list-style: none;
+    top: 0;
+    margin: auto;
+    height: 40px;
+    font-size: 28px;
+    font-family: 'Lobster', cursive;
+    color: #4a3a3a;
+}
+
+header > ul > li {
+    /*We can change the default element type to what ever an want using the display property.*/
+    /*display: inline;
+    display: block;
+    display: none;*/
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    /*font-weight: bold;*/
+}
+
+header > ul > li:hover {
+    cursor: pointer;
+    color: red;
+}
+/*Header End.*/
+
+/*Main Content Start.*/
+
+/*Main Section First Part Start.*/
+body > main {
+    position: relative;
+}
+
+main > nav {
+    width: 270px;
+    background-color: #4d1da7;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    color: white;
+}
+
+main > section {
+    /*position: relative;
+    left: 300px;
+    height: 1000px;*/
+    /*min-height: 100px;*/
+    margin-left: 270px;
+    padding: 10px;
+}
+
+main > nav > ul {
+    list-style: none;
+    font-size: 22px;
+    margin-top: 39px;
+}
+
+main > nav > ul > li {
+    padding-bottom: 30px;
+    font-family: 'Lobster', cursive;
+}
+
+main > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+    /*border-bottom: 2px solid white;*/
+    padding-bottom: 4px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+main > nav > ul > li > a:hover {
+    color: red;
+}
+/*Main Section First Part End.*/
+
+/*Main Section Second Part Start.*/
+main > section > section {
+    border: 2px solid black;
+    height: 300px;
+    position: relative;
+    display: flex;
+}
+
+main > section > section > div {
+    /*border-left: 2px solid green;
+    border-right: 2px solid green;
+    height: 100%;
+    width: calc(100%/3);*/
+    flex-grow: 1;
+}
+
+main > section > section > div:nth-child(1) {
+    background-image: url("../img/gif.gif");
+    background-size: cover;
+}
+
+main > section > section > div:nth-child(2) {
+    background-image: url("../img/gif.gif");
+    background-size: cover;
+}
+
+main > section > section > div:nth-child(3) {
+    background-image: url("../img/gif.gif");
+    background-size: cover;
+}
+/*Main Section Second Part End.*/
+
+/*Main Content End.*/
+
+/*Footer Content Start.*/
+body > footer {
+    height: 100px;
+    background-color: #696262;
+}
+
+body > footer > h2 {
+    margin-top: 0;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+/*Footer Content End.*/
+
+/*CSS Media Queries (CSS Responsive)*/
+@media all and (min-width: 320px) and (max-width: 425px) {
+    header {
+        height: 87px;
+    }
+    header > img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 10px;
+    }
+
+    header > ul {
+        right: 30px;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        font-size: 20px;
+        width: max-content;
+        margin: auto;
+        padding-left: 0;
+    }
+
+    main > nav {
+        display: none;
+    }
+
+    main > section {
+        margin-left: 0;
+    }
+
+    main > section > section {
+        flex-direction: column;
+        height: 700px;
+    }
+}
+
+@media all and (min-width: 425px) and (max-width: 768px){
+    main > section > section > div {
+        flex-grow: 1;
+    }
+
+    main > section > section > div:nth-child(1) {
+        background-image: url("../img/gif.gif");
+        background-size: cover;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px){
+    main > section > section > div:nth-child(2) {
+        background-image: url("../img/gif.gif");
+        background-size: cover;
+    }
+
+    main > section > section > div:nth-child(3) {
+        background-image: url("../img/gif.gif");
+        background-size: cover;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1440px){
+    body > footer {
+        height: 100px;
+        background-color: #696262;
+    }
+
+    body > footer > h2 {
+        margin-top: 0;
+        text-align: center;
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+    }
+}
